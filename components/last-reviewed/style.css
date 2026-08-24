@@ -1,0 +1,14 @@
+.rl-last-reviewed {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--rl-space-3xs) var(--rl-space-sm);
+	margin: var(--rl-space-lg) 0 0;
+	padding-top: var(--rl-space-xs);
+	border-top: 1px solid var(--rl-color-border);
+	font-size: var(--rl-text-sm);
+	color: var(--rl-color-text-muted);
+}
+
+.rl-last-reviewed__author {
+	font-weight: var(--rl-weight-medium);
+}

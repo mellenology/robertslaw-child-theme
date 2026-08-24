@@ -1,0 +1,63 @@
+.rl-hero {
+	padding: var(--rl-space-2xl) 0 var(--rl-space-xl);
+	background: var(--rl-color-surface-alt);
+	border-bottom: 1px solid var(--rl-color-border);
+}
+
+.rl-hero__inner {
+	max-width: var(--rl-layout-max);
+	margin-inline: auto;
+	padding-inline: var(--rl-layout-gutter);
+}
+
+.rl-hero__eyebrow {
+	margin: 0 0 var(--rl-space-2xs);
+	font-size: var(--rl-text-xs);
+	font-weight: var(--rl-weight-semibold);
+	letter-spacing: var(--rl-tracking-wider);
+	text-transform: uppercase;
+	color: var(--rl-color-accent-strong);
+}
+
+.rl-hero__heading {
+	margin: 0 0 var(--rl-space-md);
+	max-width: 20ch;
+	font-family: var(--rl-font-display);
+	font-size: var(--rl-text-4xl);
+	font-weight: var(--rl-weight-regular);
+	line-height: var(--rl-leading-tight);
+	letter-spacing: var(--rl-tracking-tight);
+	color: var(--rl-color-ink);
+	text-wrap: balance;
+}
+
+.rl-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--rl-space-xs);
+	margin: var(--rl-space-lg) 0 0;
+}
+
+/* Deep variant: navy ground, inverted text. */
+.rl-hero--deep {
+	background: var(--rl-color-surface-deep);
+	border-bottom-color: var(--rl-color-ink);
+}
+
+.rl-hero--deep .rl-hero__heading {
+	color: var(--rl-color-text-invert);
+}
+
+.rl-hero--deep .rl-hero__eyebrow {
+	color: var(--rl-color-accent);
+}
+
+.rl-hero--deep .rl-answer-block__text {
+	color: var(--rl-color-text-invert);
+}
+
+.rl-hero--plain {
+	background: transparent;
+	border-bottom: 0;
+	padding-bottom: var(--rl-space-md);
+}

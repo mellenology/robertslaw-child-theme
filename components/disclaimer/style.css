@@ -1,0 +1,21 @@
+.rl-disclaimer {
+	margin: var(--rl-space-lg) 0 0;
+}
+
+.rl-disclaimer__text {
+	margin: 0;
+	max-width: var(--rl-layout-measure);
+	font-size: var(--rl-text-sm);
+	line-height: var(--rl-leading-normal);
+	color: var(--rl-color-text-muted);
+}
+
+.rl-disclaimer--form {
+	padding: var(--rl-space-sm) var(--rl-space-md);
+	background: var(--rl-color-surface-alt);
+	border-radius: var(--rl-radius-md);
+}
+
+.rl-disclaimer--compact .rl-disclaimer__text {
+	font-size: var(--rl-text-xs);
+}

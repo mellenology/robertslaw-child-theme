@@ -1,0 +1,89 @@
+.rl-safety-exit {
+	background: var(--rl-color-safety-soft);
+	border: 1px solid color-mix(in srgb, var(--rl-color-safety) 30%, transparent);
+	border-radius: var(--rl-radius-md);
+}
+
+.rl-safety-exit__inner {
+	padding: var(--rl-space-md);
+}
+
+.rl-safety-exit--inline {
+	margin: 0 0 var(--rl-space-lg);
+}
+
+.rl-safety-exit__hotline {
+	margin: 0 0 var(--rl-space-2xs);
+	font-size: var(--rl-text-lg);
+	line-height: var(--rl-leading-normal);
+	color: var(--rl-color-text);
+}
+
+.rl-safety-exit__tel {
+	font-weight: var(--rl-weight-bold);
+	color: var(--rl-color-safety);
+	white-space: nowrap;
+}
+
+.rl-safety-exit__warning {
+	margin: 0 0 var(--rl-space-sm);
+	max-width: var(--rl-layout-measure);
+	font-size: var(--rl-text-base);
+	line-height: var(--rl-leading-relaxed);
+	color: var(--rl-color-text);
+}
+
+.rl-safety-exit__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--rl-space-xs);
+	margin: 0;
+}
+
+.rl-safety-exit__button {
+	display: inline-block;
+	padding: var(--rl-space-2xs) var(--rl-space-md);
+	background: var(--rl-color-safety);
+	color: var(--rl-color-text-invert);
+	font-weight: var(--rl-weight-semibold);
+	text-decoration: none;
+	border-radius: var(--rl-radius-sm);
+}
+
+.rl-safety-exit__button:hover,
+.rl-safety-exit__button:focus-visible {
+	background: color-mix(in srgb, var(--rl-color-safety) 85%, black);
+	color: var(--rl-color-text-invert);
+}
+
+.rl-safety-exit__hint {
+	font-size: var(--rl-text-sm);
+	color: var(--rl-color-text-muted);
+}
+
+/* Fixed variant stays reachable while reading a long page. */
+.rl-safety-exit--fixed {
+	position: fixed;
+	z-index: 9999;
+	right: var(--rl-space-sm);
+	bottom: var(--rl-space-sm);
+	max-width: min(24rem, calc(100vw - 2 * var(--rl-space-sm)));
+	box-shadow: var(--rl-shadow-lg);
+}
+
+.rl-safety-exit--fixed .rl-safety-exit__inner {
+	padding: var(--rl-space-sm);
+}
+
+.rl-safety-exit--fixed .rl-safety-exit__hotline {
+	font-size: var(--rl-text-base);
+}
+
+.rl-safety-exit--fixed .rl-safety-exit__warning {
+	font-size: var(--rl-text-sm);
+}
+
+@media print {
+	.rl-safety-exit { display: none; }
+}

@@ -1,0 +1,56 @@
+.rl-faq {
+	padding: var(--rl-space-xl) 0;
+}
+
+.rl-faq__heading {
+	margin: 0 0 var(--rl-space-lg);
+	font-family: var(--rl-font-display);
+	font-size: var(--rl-text-3xl);
+	font-weight: var(--rl-weight-regular);
+	color: var(--rl-color-ink);
+}
+
+.rl-faq__list {
+	display: grid;
+	gap: var(--rl-space-lg);
+	max-width: var(--rl-layout-measure);
+}
+
+.rl-faq__item {
+	padding-bottom: var(--rl-space-lg);
+	border-bottom: 1px solid var(--rl-color-border);
+}
+
+.rl-faq__item:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.rl-faq__question {
+	margin: 0 0 var(--rl-space-2xs);
+	font-family: var(--rl-font-display);
+	font-size: var(--rl-text-xl);
+	font-weight: var(--rl-weight-medium);
+	line-height: var(--rl-leading-snug);
+	color: var(--rl-color-ink);
+	text-wrap: balance;
+}
+
+/* The direct answer carries visual weight because it carries the meaning. */
+.rl-faq__direct {
+	margin: 0 0 var(--rl-space-2xs);
+	font-size: var(--rl-text-lg);
+	font-weight: var(--rl-weight-medium);
+	line-height: var(--rl-leading-normal);
+	color: var(--rl-color-text);
+}
+
+.rl-faq__answer > p {
+	margin: 0 0 var(--rl-space-xs);
+	line-height: var(--rl-leading-relaxed);
+	color: var(--rl-color-text-muted);
+}
+
+.rl-faq__answer > p:last-child {
+	margin-bottom: 0;
+}

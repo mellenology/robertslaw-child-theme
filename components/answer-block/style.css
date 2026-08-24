@@ -1,0 +1,23 @@
+.rl-answer-block {
+	margin: 0 0 var(--rl-space-lg);
+	max-width: var(--rl-layout-measure);
+}
+
+.rl-answer-block__text {
+	margin: 0;
+	font-size: var(--rl-text-lg);
+	line-height: var(--rl-leading-relaxed);
+	color: var(--rl-color-text);
+}
+
+.rl-answer-block--inset {
+	padding: var(--rl-space-md) var(--rl-space-lg);
+	background: var(--rl-color-surface-alt);
+	border-left: 3px solid var(--rl-color-accent);
+	border-radius: 0 var(--rl-radius-md) var(--rl-radius-md) 0;
+}
+
+.rl-answer-block--lead .rl-answer-block__text {
+	font-size: var(--rl-text-xl);
+	line-height: var(--rl-leading-normal);
+}

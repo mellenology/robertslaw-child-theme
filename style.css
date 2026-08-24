@@ -1,0 +1,28 @@
+/*
+Theme Name:   Roberts Law and Mediation
+Theme URI:    https://robertslawandmediation.com/
+Description:  Child theme of Themeco Pro for Joni K. Roberts Law and Mediation Office, Memphis, Tennessee. All design tokens, firm facts, page metadata, components, and the Tennessee RPC compliance guardrails are declared centrally in /config and consumed everywhere from there. See README.md before editing.
+Author:       Cobble Marketing
+Author URI:   https://cobblemarketing.com/
+Template:     pro
+Version:      1.0.0
+Requires PHP: 7.4
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  robertslaw
+Tags:         child-theme, legal, law-firm
+*/
+
+/*
+ * Intentionally almost empty.
+ *
+ * Do not add rules here. Styles live in:
+ *   assets/css/base.css              — element and layout defaults
+ *   components/<slug>/style.css      — one file per component, loaded only
+ *                                      when that component renders
+ *
+ * Colors, fonts, spacing and sizing must be referenced as tokens
+ * (var(--rl-color-accent), var(--rl-space-lg), ...) which are compiled from
+ * config/tokens.php. A hardcoded hex or px value here defeats the point of
+ * the token layer — change the token, not the rule.
+ */

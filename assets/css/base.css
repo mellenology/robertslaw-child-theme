@@ -1,0 +1,174 @@
+/**
+ * Base styles.
+ *
+ * Element defaults and the few shared primitives (buttons, layout container,
+ * editor-only notes). Component styles live in components/<slug>/style.css.
+ *
+ * Every value here is a token. If you need a colour or a size that is not in
+ * config/tokens.php, add it there rather than hardcoding it — a literal value
+ * in this file is a value that cannot be changed from the central place.
+ */
+
+/* ---------------------------------------------------------------- Elements */
+
+body {
+	font-family: var(--rl-font-body);
+	font-size: var(--rl-text-base);
+	line-height: var(--rl-leading-normal);
+	color: var(--rl-color-text);
+	background: var(--rl-color-surface);
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--rl-font-display);
+	font-weight: var(--rl-weight-regular);
+	line-height: var(--rl-leading-snug);
+	color: var(--rl-color-ink);
+	text-wrap: balance;
+}
+
+p, li {
+	max-width: var(--rl-layout-measure);
+}
+
+a {
+	color: var(--rl-color-accent-strong);
+	text-underline-offset: 2px;
+}
+
+a:hover {
+	color: var(--rl-color-ink);
+}
+
+/*
+ * Visible focus on everything. Legal sites are a frequent accessibility
+ * complaint target, and the site carries an accessibility statement.
+ */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+	outline: 2px solid var(--rl-color-focus);
+	outline-offset: 2px;
+	border-radius: var(--rl-radius-sm);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* -------------------------------------------------------------- Primitives */
+
+.rl-container {
+	max-width: var(--rl-layout-max);
+	margin-inline: auto;
+	padding-inline: var(--rl-layout-gutter);
+}
+
+.rl-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--rl-space-2xs);
+	padding: var(--rl-space-2xs) var(--rl-space-md);
+	min-height: 44px; /* Comfortable tap target — most legal search is mobile. */
+	font-family: var(--rl-font-body);
+	font-size: var(--rl-text-base);
+	font-weight: var(--rl-weight-semibold);
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: var(--rl-radius-sm);
+	cursor: pointer;
+	transition: background-color var(--rl-motion-base) var(--rl-motion-ease),
+	            border-color var(--rl-motion-base) var(--rl-motion-ease),
+	            color var(--rl-motion-base) var(--rl-motion-ease);
+}
+
+.rl-btn--primary {
+	background: var(--rl-color-ink);
+	color: var(--rl-color-text-invert);
+}
+
+.rl-btn--primary:hover {
+	background: var(--rl-color-ink-soft);
+	color: var(--rl-color-text-invert);
+}
+
+.rl-btn--ghost {
+	background: transparent;
+	border-color: var(--rl-color-border-strong);
+	color: var(--rl-color-ink);
+}
+
+.rl-btn--ghost:hover {
+	border-color: var(--rl-color-accent);
+	color: var(--rl-color-accent-strong);
+}
+
+/* ------------------------------------------------------- Sitewide fixtures */
+
+.rl-site-disclaimer {
+	padding: var(--rl-space-md) 0;
+	background: var(--rl-color-surface-sunken);
+	border-top: 1px solid var(--rl-color-border);
+}
+
+.rl-site-disclaimer__inner {
+	max-width: var(--rl-layout-max);
+	margin-inline: auto;
+	padding-inline: var(--rl-layout-gutter);
+}
+
+.rl-site-disclaimer p {
+	margin: 0;
+	max-width: none;
+	font-size: var(--rl-text-xs);
+	line-height: var(--rl-leading-normal);
+	color: var(--rl-color-text-muted);
+}
+
+/* Click-to-call in the mobile header. */
+.rl-phone {
+	font-weight: var(--rl-weight-semibold);
+	white-space: nowrap;
+}
+
+/* ----------------------------------------------------------- Editor-facing */
+
+/*
+ * Notes and markers shown only to logged-in editors. Deliberately loud: they
+ * flag content that is missing or that is waiting on the client, and they
+ * should be uncomfortable to leave in place.
+ */
+.rl-editor-note {
+	margin: var(--rl-space-xs) 0;
+	padding: var(--rl-space-2xs) var(--rl-space-xs);
+	font-family: var(--rl-font-mono);
+	font-size: var(--rl-text-xs);
+	line-height: var(--rl-leading-normal);
+	color: var(--rl-color-safety);
+	background: var(--rl-color-safety-soft);
+	border-left: 3px solid var(--rl-color-safety);
+	border-radius: 0 var(--rl-radius-sm) var(--rl-radius-sm) 0;
+}
+
+.rl-placeholder {
+	padding: 0 var(--rl-space-3xs);
+	font-family: var(--rl-font-mono);
+	font-size: 0.9em;
+	color: var(--rl-color-safety);
+	background: var(--rl-color-safety-soft);
+	border-radius: var(--rl-radius-sm);
+}
+
+/* ------------------------------------------------------------- Preferences */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
