@@ -60,6 +60,37 @@ return array(
 		),
 	),
 
+	/*
+	 * Prose. The workhorse for body copy on every page.
+	 *
+	 * Headings inside the content must be H2 or lower — the page's single H1
+	 * belongs to the hero, which takes it from config/pages.php. Content saved
+	 * here is scanned by the compliance guard on save like any other post copy.
+	 */
+	'rich-text' => array(
+		'label'       => 'Prose',
+		'description' => 'Body copy. Headings inside must be H2 or lower; the H1 belongs to the hero.',
+		'category'    => 'Roberts Law — Content',
+		'icon'        => 'align-left',
+		'fields'      => array(
+			'content' => array(
+				'type'    => 'rich-text',
+				'label'   => 'Content',
+				'default' => '',
+				'tooltip' => 'Open each section with a direct answer before elaborating — that first sentence is what gets extracted and quoted. Phrase H2s as questions people actually type.',
+			),
+			'measure' => array(
+				'type'    => 'select',
+				'label'   => 'Line length',
+				'default' => 'default',
+				'options' => array(
+					'default' => 'Default (comfortable reading measure)',
+					'wide'    => 'Wide (full column)',
+				),
+			),
+		),
+	),
+
 	'hero' => array(
 		'label'       => 'Page Hero',
 		'description' => 'H1 plus optional answer block and primary actions. One per page.',

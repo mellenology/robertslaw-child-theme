@@ -180,6 +180,66 @@ Currently blocked, all client decisions rather than writing tasks:
 
 ---
 
+## Page templates
+
+`config/page-templates.php` holds one blueprint per page: the exact ordered
+stack of sections, rows, columns, and components, with copy already placed.
+Cornerstone's hierarchy is Section → Row → Column → Element, and the blueprints
+are shaped the same way, so the export is a walk rather than a translation.
+
+Two things consume a blueprint:
+
+```bash
+php bin/build-tco.php              # serialise for import into Pro
+php bin/build-tco.php home about   # or just named pages
+```
+
+```php
+\RobertsLaw\Page_Template::render( 'home' );   // render directly, no Cornerstone
+[rl_page_template key="home"]                   // or as a shortcode
+```
+
+Both read the same blueprint, so what you review on screen is what gets
+exported.
+
+### Copy provenance
+
+Every block of prose is marked in the surrounding comment:
+
+- **APPROVED** — from `content/website-copy.md`
+- **DRAFT** — written in the blueprint, *not reviewed*, must not publish as-is
+- **BLOCKED** — cannot be written until a client decision lands
+
+Legal specifics are only asserted where the source documents already assert
+them. Where a target question has no sourced answer, the slot reads
+`[NEEDS ATTORNEY INPUT — …]` rather than inventing Tennessee law.
+
+A page carrying unresolved slots is flagged `review_required` or `blocked`, and
+`Page_Template` **hides it from visitors** while showing it to logged-in
+editors. The test suite enforces that pairing, so a draft page cannot quietly
+become publicly reachable.
+
+| Page | Copy status |
+|---|---|
+| `/`, `/about/`, `/joni-k-roberts/` | Approved — ready to review |
+| `/family-law/`, `/divorce/`, `/parenting-time/`, `/probate-estate-planning/` | Draft, needs attorney input |
+| `/orders-of-protection/` | Draft; safety block leads, testimonials blocked |
+| `/mediation/`, `/mediation-faq/` | Blocked on the Rule 31 framing fix |
+| `/contact/` | Blocked on address and hours |
+
+### The `.tco` step is not finished
+
+`bin/build-tco.php` builds the normalised element tree and stages it as JSON in
+`build/`. It does **not** yet emit `.tco`, because that envelope is not publicly
+documented and `theme.co` is blocked by this environment's egress policy. A
+malformed `.tco` fails *silently* on import in Manage Library, so guessing at it
+would be worse than not shipping one.
+
+One sample Cornerstone export finishes it — everything above `rl_encode_tco()`
+stays as-is.
+
+---
+
 ## Development
 
 ```bash

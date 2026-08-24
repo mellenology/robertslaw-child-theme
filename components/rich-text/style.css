@@ -1,0 +1,61 @@
+.rl-rich-text > * {
+	max-width: var(--rl-layout-measure);
+}
+
+.rl-rich-text--wide > * {
+	max-width: none;
+}
+
+.rl-rich-text h2 {
+	margin: var(--rl-space-xl) 0 var(--rl-space-xs);
+	font-size: var(--rl-text-2xl);
+	font-weight: var(--rl-weight-regular);
+	line-height: var(--rl-leading-snug);
+	color: var(--rl-color-ink);
+}
+
+.rl-rich-text > h2:first-child {
+	margin-top: 0;
+}
+
+.rl-rich-text h3 {
+	margin: var(--rl-space-lg) 0 var(--rl-space-2xs);
+	font-size: var(--rl-text-xl);
+	font-weight: var(--rl-weight-medium);
+	color: var(--rl-color-ink);
+}
+
+.rl-rich-text p {
+	margin: 0 0 var(--rl-space-sm);
+	line-height: var(--rl-leading-relaxed);
+	color: var(--rl-color-text);
+}
+
+.rl-rich-text ul,
+.rl-rich-text ol {
+	margin: 0 0 var(--rl-space-sm);
+	padding-left: var(--rl-space-md);
+	color: var(--rl-color-text);
+}
+
+.rl-rich-text li {
+	margin-bottom: var(--rl-space-2xs);
+	line-height: var(--rl-leading-relaxed);
+}
+
+.rl-rich-text li:last-child {
+	margin-bottom: 0;
+}
+
+.rl-rich-text strong {
+	font-weight: var(--rl-weight-semibold);
+	color: var(--rl-color-ink);
+}
+
+/*
+ * Unresolved slots. Bracketed [NEEDS ATTORNEY INPUT] / [BLOCKED] markers are
+ * ordinary paragraphs, so they are styled by the editor note rule only when a
+ * logged-in editor is viewing. Visitors would see raw brackets, which is why
+ * a page carrying them must not be published — the Build Status screen tracks
+ * which ones those are.
+ */

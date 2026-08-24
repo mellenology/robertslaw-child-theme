@@ -40,8 +40,11 @@ function get_post_meta( $id, $key ) {
 require_once ROBERTSLAW_DIR . 'inc/class-config.php';
 require_once ROBERTSLAW_DIR . 'inc/class-compliance.php';
 require_once ROBERTSLAW_DIR . 'inc/class-tokens.php';
+require_once ROBERTSLAW_DIR . 'inc/class-components.php';
 
 use RobertsLaw\Compliance;
+use RobertsLaw\Components;
+use RobertsLaw\Config;
 use RobertsLaw\Tokens;
 
 // --- Tiny assertion harness --------------------------------------------------
@@ -183,6 +186,174 @@ check( 'emits --rl-color-ink', false !== strpos( $css, '--rl-color-ink: #16283F;
 check( 'emits --rl-space-lg', false !== strpos( $css, '--rl-space-lg: 2rem;' ) );
 check( 'emits a clamp() value intact', false !== strpos( $css, 'clamp(' ) );
 check( 'var_ref builds a reference', 'var(--rl-color-accent)' === Tokens::var_ref( 'color', 'accent' ) );
+
+echo "\nPage blueprints\n";
+
+$blueprints = Config::load( 'page-templates' );
+$pages      = Config::load( 'pages' );
+$known      = array_keys( Components::all() );
+
+check( 'blueprints load', count( $blueprints ) > 0, count( $blueprints ) . ' found' );
+
+$bad_pages      = array();
+$bad_components = array();
+$missing_tpl    = array();
+$unresolved     = array();
+
+foreach ( $blueprints as $key => $blueprint ) {
+	if ( ! isset( $pages[ $key ] ) ) {
+		$bad_pages[] = $key;
+	}
+
+	foreach ( $blueprint['sections'] as $section ) {
+		foreach ( $section['rows'] as $row ) {
+			foreach ( $row['columns'] as $column ) {
+				foreach ( $column['components'] as $entry ) {
+					$slug = $entry['component'];
+
+					if ( ! in_array( $slug, $known, true ) ) {
+						$bad_components[] = "{$key}:{$slug}";
+						continue;
+					}
+
+					if ( ! file_exists( ROBERTSLAW_DIR . "components/{$slug}/template.php" ) ) {
+						$missing_tpl[] = $slug;
+					}
+
+					// Every declared att must be a real field on that component.
+					$fields = array_keys( Components::get( $slug )['fields'] ?? array() );
+
+					foreach ( array_keys( $entry['atts'] ?? array() ) as $att ) {
+						if ( ! in_array( $att, $fields, true ) ) {
+							$bad_components[] = "{$key}:{$slug}.{$att}";
+						}
+					}
+
+					// Track slots still carrying an unresolved marker.
+					$content = (string) ( $entry['atts']['content'] ?? '' );
+
+					if ( preg_match( '/\[(NEEDS ATTORNEY INPUT|BLOCKED|FORM|MAP EMBED)/', $content ) ) {
+						$unresolved[ $key ] = true;
+					}
+				}
+			}
+		}
+	}
+}
+
+check( 'every blueprint maps to a page in the inventory', empty( $bad_pages ), implode( ', ', $bad_pages ) );
+check( 'every component reference is real', empty( $bad_components ), implode( ', ', array_unique( $bad_components ) ) );
+check( 'every referenced component has a template', empty( $missing_tpl ), implode( ', ', array_unique( $missing_tpl ) ) );
+
+// Not a failure — a report. These are the pages that must not publish yet.
+echo '  note  ' . count( $unresolved ) . " page(s) carry unresolved copy slots: "
+	. implode( ', ', array_keys( $unresolved ) ) . "\n";
+
+// A page with unresolved slots must be flagged so Build Status can catch it.
+$unflagged = array();
+
+foreach ( array_keys( $unresolved ) as $key ) {
+	$blueprint = $blueprints[ $key ];
+
+	if ( empty( $blueprint['review_required'] ) && empty( $blueprint['blocked'] ) ) {
+		$unflagged[] = $key;
+	}
+}
+
+check(
+	'pages with unresolved slots are flagged review_required or blocked',
+	empty( $unflagged ),
+	implode( ', ', $unflagged )
+);
+
+// The H1 belongs to the hero. A blueprint must never hardcode one in prose.
+$h1_in_prose = array();
+
+foreach ( $blueprints as $key => $blueprint ) {
+	foreach ( $blueprint['sections'] as $section ) {
+		foreach ( $section['rows'] as $row ) {
+			foreach ( $row['columns'] as $column ) {
+				foreach ( $column['components'] as $entry ) {
+					if ( false !== stripos( (string) ( $entry['atts']['content'] ?? '' ), '<h1' ) ) {
+						$h1_in_prose[] = $key;
+					}
+				}
+			}
+		}
+	}
+}
+
+check( 'no blueprint hardcodes an H1 in prose', empty( $h1_in_prose ), implode( ', ', $h1_in_prose ) );
+
+// Restricted language must not have crept into any drafted copy.
+$flagged_copy = array();
+
+foreach ( $blueprints as $key => $blueprint ) {
+	foreach ( $blueprint['sections'] as $section ) {
+		foreach ( $section['rows'] as $row ) {
+			foreach ( $row['columns'] as $column ) {
+				foreach ( $column['components'] as $entry ) {
+					foreach ( $entry['atts'] ?? array() as $value ) {
+						if ( ! is_string( $value ) ) {
+							continue;
+						}
+
+						foreach ( Compliance::scan_text( $value ) as $finding ) {
+							$flagged_copy[] = "{$key}: {$finding['term']}";
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+check(
+	'no restricted language in any blueprint copy',
+	empty( $flagged_copy ),
+	implode( '; ', array_unique( $flagged_copy ) )
+);
+
+// The sensitive page must lead with safety.
+$oop   = $blueprints['orders-of-protection'] ?? array();
+$first = $oop['sections'][0]['rows'][0]['columns'][0]['components'][0]['component'] ?? '';
+
+check( 'orders-of-protection leads with the safety block', 'safety-exit' === $first, "got '{$first}'" );
+
+$has_testimonials = false;
+
+foreach ( $oop['sections'] ?? array() as $section ) {
+	foreach ( $section['rows'] as $row ) {
+		foreach ( $row['columns'] as $column ) {
+			foreach ( $column['components'] as $entry ) {
+				if ( 'testimonials' === $entry['component'] ) {
+					$has_testimonials = true;
+				}
+			}
+		}
+	}
+}
+
+check( 'orders-of-protection has no testimonials', ! $has_testimonials );
+
+// No blueprint anywhere ships a testimonial, since none are consented yet.
+$testimonial_pages = array();
+
+foreach ( $blueprints as $key => $blueprint ) {
+	foreach ( $blueprint['sections'] as $section ) {
+		foreach ( $section['rows'] as $row ) {
+			foreach ( $row['columns'] as $column ) {
+				foreach ( $column['components'] as $entry ) {
+					if ( 'testimonials' === $entry['component'] ) {
+						$testimonial_pages[] = $key;
+					}
+				}
+			}
+		}
+	}
+}
+
+check( 'no blueprint places testimonials yet', empty( $testimonial_pages ), implode( ', ', $testimonial_pages ) );
 
 echo "\n" . str_repeat( '-', 46 ) . "\n";
 printf( "%d passed, %d failed\n\n", $passed, $failed );

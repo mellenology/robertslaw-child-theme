@@ -18,6 +18,7 @@ require_once ROBERTSLAW_DIR . 'inc/class-seo.php';
 require_once ROBERTSLAW_DIR . 'inc/class-assets.php';
 require_once ROBERTSLAW_DIR . 'inc/class-robots.php';
 require_once ROBERTSLAW_DIR . 'inc/class-guards.php';
+require_once ROBERTSLAW_DIR . 'inc/class-page-template.php';
 
 require_once ROBERTSLAW_DIR . 'inc/admin/class-settings.php';
 require_once ROBERTSLAW_DIR . 'inc/admin/class-build-status.php';
@@ -42,6 +43,7 @@ add_action(
 		\RobertsLaw\Assets::init();
 		\RobertsLaw\Robots::init();
 		\RobertsLaw\Guards::init();
+		\RobertsLaw\Page_Template::init();
 
 		if ( is_admin() ) {
 			\RobertsLaw\Admin\Settings::init();
