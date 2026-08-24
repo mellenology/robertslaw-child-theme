@@ -1,0 +1,16 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Dependencies & build output
+node_modules/
+vendor/
+*.log
+
+# Never commit secrets or local WP config
+wp-config.php
+.env
+.env.*
