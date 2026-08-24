@@ -1,0 +1,102 @@
+{
+    "name": "Contact Joni K. Roberts Law and Mediation Office | Memphis, TN",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "c56d549e0c37",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "bc7813355149",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "e3b9bc17bf9c",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "b6fd96cc2118",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "2bb6227079f6",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Joni K. Roberts Law and Mediation Office is located in Memphis, Tennessee and serves clients in Memphis and Shelby County. Call (901) 800-2948, email jkroberts@robertslawandmediation.com, or complete the consultation form on this page. Submitting the form does not create an attorney-client relationship.",
+                                    "show_actions": "true",
+                                    "variant": "plain"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "9321e7f1596b",
+            "_label": "Details and form",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "7850a7377495",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "6667ad7ebabc",
+                            "base_font_size": "",
+                            "width": "50%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-contact-card",
+                                    "_id": "5a20d5603cb8",
+                                    "heading": "Office details",
+                                    "show_address": "true",
+                                    "show_hours": "true",
+                                    "layout": "stacked"
+                                },
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "82d7356cf6a0",
+                                    "content": "<p>[MAP EMBED &mdash; blocked on the street address. Add with loading=\"lazy\" and explicit width/height so it does not shift layout.]</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        },
+                        {
+                            "_type": "column",
+                            "_id": "55d91bb8f430",
+                            "base_font_size": "",
+                            "width": "50%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "ebe3162e4615",
+                                    "content": "<h2>Request a consultation</h2><p>[FORM &mdash; build in the site's form plugin with these fields, per content/website-copy.md: First Name; Last Name; Email Address; Phone Number; Preferred Method of Contact; Case Type / Service Inquiry (dropdown); Brief Case Description; How Did You Hear About Us?; Preferred Consultation Date/Time; Privacy Notice / Consent Checkbox; CAPTCHA or security question; Submit.]</p>",
+                                    "measure": "default"
+                                },
+                                {
+                                    "_type": "rl-disclaimer",
+                                    "_id": "5f6c972107b1",
+                                    "variant": "form"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "name": "Joni K. Roberts, Memphis Attorney and Mediator | Family Law, Probate, Civil Litigation",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "3f94ad10f693",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "817ce58c778b",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "f75753571836",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "8c92318cbdaa",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "5e8342bda48e",
+                                    "heading": "",
+                                    "eyebrow": "Attorney and Mediator",
+                                    "answer": "Joni K. Roberts is an attorney in Memphis, Tennessee, admitted to the Tennessee bar in 2004. Her practice covers family law, probate law, and general civil litigation, and she also serves as a neutral mediator. She has represented clients in General Sessions, Circuit, Chancery, Probate, and Federal District Court, and argued a successful appeal before the United States Court of Appeals for the Sixth Circuit in a First Amendment civil rights case.",
+                                    "show_actions": "true",
+                                    "variant": "plain"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "f239d48e7aff",
+            "_label": "Practice and courts",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "d2de78857ad4",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "ab109e0f413e",
+                            "base_font_size": "",
+                            "width": "66.66%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "398f99f15b33",
+                                    "content": "<h2>What is Joni K. Roberts&rsquo; experience?</h2><p>Licensed in Tennessee since 2004 &mdash; over twenty years of practice across family law, probate, and general civil litigation, in both state trial courts and federal court.</p><h2>What does Joni K. Roberts practice?</h2><ul><li><strong>Family law:</strong> adoptions, child support, divorce, post-divorce matters, and parenting time</li><li><strong>Probate law:</strong> conservatorships, guardianships, estates, trusts, and wills</li><li><strong>Civil litigation:</strong> general civil matters in state and federal court</li></ul><h2>What courts has Joni K. Roberts appeared in?</h2><p>General Sessions Court, Circuit Court, Chancery Court, Probate Court, and Federal District Court, as well as the United States Court of Appeals for the Sixth Circuit.</p><h2>What appointments and pro bono work has she done?</h2><p>Ms. Roberts has been appointed Guardian <em>ad Litem</em> in Tennessee probate court and has served as <em>pro bono</em> counsel on a variety of matters through Memphis Area Legal Services.</p><h2>Where did Joni K. Roberts go to law school?</h2><p>She earned her J.D. from the Cecil C. Humphreys School of Law at the University of Memphis in 2003, where she served as Law Review Research Editor and received the CALI Award in International Law. She also holds an M.A.T. from the University of Memphis (1995) and a B.A. from the University of California, Davis (1989).</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        },
+                        {
+                            "_type": "column",
+                            "_id": "94438faef18b",
+                            "base_font_size": "",
+                            "width": "33.33%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-attorney-card",
+                                    "_id": "d3c5f386ff0e",
+                                    "summary": "",
+                                    "photo": "",
+                                    "show_credentials": "true",
+                                    "show_courts": "false"
+                                },
+                                {
+                                    "_type": "rl-contact-card",
+                                    "_id": "75adf1db9a79",
+                                    "heading": "Contact",
+                                    "show_address": "true",
+                                    "show_hours": "true",
+                                    "layout": "stacked"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "3983de69bc20",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "4c02d9eb15a9",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "08bc33187f76",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "b6ad7dde9225",
+                                    "heading": "Speak with Joni K. Roberts",
+                                    "body": "",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,247 @@
+{
+    "name": "Memphis Family Law Attorney and Mediator | Joni K. Roberts Law and Mediation Office",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "016a8766c3f5",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-3xl)",
+            "padding_bottom": "var(--rl-space-3xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "c58a2aebbffb",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "013bb3733809",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "747e23ea258f",
+                                    "heading": "",
+                                    "eyebrow": "Memphis, Tennessee",
+                                    "answer": "Joni K. Roberts Law and Mediation Office is a Memphis, Tennessee law firm handling family law, probate and estate planning, and general civil litigation, with mediation offered as an alternative to litigation across all three areas. Attorney Joni K. Roberts has practiced law in Tennessee since 2004 and has represented clients in General Sessions, Circuit, Chancery, Probate, and Federal District Court, as well as on appeal to the United States Court of Appeals for the Sixth Circuit. The firm serves clients in Memphis and Shelby County.",
+                                    "show_actions": "true",
+                                    "variant": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "e5c7e6fb8e63",
+            "_label": "What the firm does",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "054ad07bff51",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "e736947b61cd",
+                            "base_font_size": "",
+                            "width": "66.66%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "dbe70b6f3553",
+                                    "content": "<h2>What does Joni K. Roberts Law and Mediation Office do?</h2><p>The firm practices in three areas: family law, probate and estate planning, and general civil litigation. Joni K. Roberts handles matters both as an advocate in court and as a neutral mediator, which means clients can pursue either a negotiated resolution or litigation depending on what the situation requires.</p><h2>Why work with an attorney who also mediates?</h2><p>Joni K. Roberts practices as an advocate in court and also serves as a neutral mediator, which means she has seen the same kinds of disputes resolve on both paths. Clients get a candid read on whether a matter is likely to settle or likely to be tried, rather than an assessment shaped by a single practice model.</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        },
+                        {
+                            "_type": "column",
+                            "_id": "336b4bd6ebb1",
+                            "base_font_size": "",
+                            "width": "33.33%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-contact-card",
+                                    "_id": "2d7efb1c1c63",
+                                    "heading": "Speak with the office",
+                                    "show_address": "true",
+                                    "show_hours": "true",
+                                    "layout": "stacked"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "d773b5ab0800",
+            "_label": "Practice areas",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "f875d505ae2a",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "ae9dcbed054c",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-service-grid",
+                                    "_id": "b915a15b1fc4",
+                                    "heading": "Legal Services",
+                                    "silo": "",
+                                    "limit": "9",
+                                    "columns": "3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "59e1edd3afef",
+            "_label": "Family law detail",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "7f3f7de8a6a9",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "b4b7bbcfe952",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "8ea3d66111e0",
+                                    "content": "<h2>What family law matters does the firm handle?</h2><p>Joni K. Roberts handles divorce, parenting time and parenting plans, child support, post-divorce modification, adoption, paternity, and domestic violence protection orders in Memphis and Shelby County.</p><ul><li><strong>Divorce.</strong> Representation in contested and uncontested divorce in Tennessee, including property division, alimony, and grounds. Tennessee requires a 60-day waiting period for divorcing couples without minor children and 90 days for couples with minor children.</li><li><strong>Parenting time.</strong> Tennessee courts issue a permanent parenting plan setting each parent&rsquo;s residential schedule and decision-making authority. The firm helps parents propose, negotiate, and modify these plans.</li><li><strong>Child support.</strong> Calculated under the Tennessee Child Support Guidelines using both parents&rsquo; incomes and the number of days each parent spends with the child.</li><li><strong>Adoption.</strong> Step-parent, relative, and agency adoptions, including termination of parental rights where required.</li><li><strong>Paternity.</strong> Establishing or disputing parentage, and the parenting and support orders that follow.</li><li><strong>Domestic violence.</strong> Petitions for orders of protection in Shelby County, and defense against petitions.</li></ul><h2>What probate and estate planning work does the firm do?</h2><p>Joni K. Roberts handles wills, trusts, estates, conservatorships, and guardianships, and has served as Guardian ad Litem in Tennessee probate court.</p><h2>What is mediation, and how is it different from going to court?</h2><p>Mediation is a voluntary, informal process in which a neutral third party helps disputing parties negotiate their own settlement. Unlike a judge, a mediator does not decide the case or rule on the issues &mdash; the parties keep control of the outcome.</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "f0e7af08bed4",
+            "_label": "Attorney",
+            "bg_color": "var(--rl-color-surface-sunken)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "2715a4456ba3",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "a8cc25e3ddca",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-attorney-card",
+                                    "_id": "a47bac7aa5e2",
+                                    "summary": "Joni K. Roberts is an attorney in Memphis, Tennessee, admitted to the Tennessee bar in 2004. Her practice covers family law, probate law, and general civil litigation, and she also serves as a neutral mediator.",
+                                    "photo": "",
+                                    "show_credentials": "true",
+                                    "show_courts": "true"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "cbdbf0fc2a8e",
+            "_label": "Consultation",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "9fe0a6275d81",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "e2a8eaa9705d",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "9d24781713a6",
+                                    "content": "<h2>How do I schedule a consultation?</h2><p>Call (901) 800-2948, email jkroberts@robertslawandmediation.com, or complete the consultation form on this page. Submitting the form does not create an attorney-client relationship.</p>",
+                                    "measure": "default"
+                                },
+                                {
+                                    "_type": "rl-disclaimer",
+                                    "_id": "a07e0e70da10",
+                                    "variant": "form"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "90a01689cc42",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-3xl)",
+            "padding_bottom": "var(--rl-space-3xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "3fa6ee2804c6",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "6f7adfb056b7",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "288f1dbd6800",
+                                    "heading": "Ready to take the next step in resolving your legal matters?",
+                                    "body": "Whether you are navigating family law or estate planning issues, seeking mediation, or facing another legal question, the office is here to help you understand your options. Contact us to schedule a consultation.",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "name": "About Joni K. Roberts Law and Mediation Office | Memphis, TN",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "6c830d22757c",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "c6c375ec7e64",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "96153457e9d1",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "cebe6930f361",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "d5e69f924469",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Joni K. Roberts Law and Mediation Office is a Memphis, Tennessee law firm founded by attorney Joni K. Roberts, who has been licensed to practice in Tennessee since 2004. The firm focuses on mediation, estate planning, and general civil matters, and offers both litigation representation and neutral mediation services.",
+                                    "show_actions": "true",
+                                    "variant": "plain"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "b717aad708e3",
+            "_label": "Body",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "ddd4ee473cc5",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "1fdfab562f87",
+                            "base_font_size": "",
+                            "width": "66.66%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "a5e1a3b7ab3e",
+                                    "content": "<h2>Who founded Joni K. Roberts Law and Mediation Office?</h2><p>Attorney Joni K. Roberts founded the firm. She earned her J.D. from the Cecil C. Humphreys School of Law in 2003 and was admitted to the Tennessee bar in 2004. She has since practiced in the state and federal trial courts serving Memphis and Shelby County, and has handled an appeal before the United States Court of Appeals for the Sixth Circuit.</p><h2>What makes a firm that does both litigation and mediation different?</h2><p>Most attorneys do one or the other. Joni K. Roberts practices as an advocate in court and serves as a neutral mediator, which means she has seen how the same dispute plays out on both paths. Clients get a realistic assessment of whether their matter is likely to settle or likely to be tried, rather than a recommendation shaped by a single practice model.</p><h2>What areas of law does the firm handle?</h2><p>Family law, estate planning and probate, and general civil matters, with mediation available across all three.</p><h2>What courts does the firm practice in?</h2><p>General Sessions Court, Circuit Court, Chancery Court, Probate Court, and Federal District Court, plus appellate work before the United States Court of Appeals for the Sixth Circuit.</p><h2>How do I contact the firm?</h2><p>Call (901) 800-2948 or email jkroberts@robertslawandmediation.com. The office is located in Memphis, Tennessee.</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        },
+                        {
+                            "_type": "column",
+                            "_id": "c6c468e77842",
+                            "base_font_size": "",
+                            "width": "33.33%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-attorney-card",
+                                    "_id": "935d825d7a66",
+                                    "summary": "",
+                                    "photo": "",
+                                    "show_credentials": "true",
+                                    "show_courts": "false"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "767f3daa8902",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "ae0a07c334c5",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "ec4c4f93d262",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "011a531d8a24",
+                                    "heading": "Discuss your situation with the office",
+                                    "body": "Call or email to arrange a consultation. Submitting a form or sending an email does not create an attorney-client relationship.",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

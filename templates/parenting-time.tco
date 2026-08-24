@@ -1,0 +1,155 @@
+{
+    "name": "Memphis Child Custody and Parenting Time Attorney | Tennessee Parenting Plans",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "47f1d905c95a",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "c106881e9864",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "951ad9f9ece9",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "92e4f29993fc",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "3dd60ca7d8d8",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Tennessee courts issue a permanent parenting plan setting each parent's residential schedule and decision-making authority. Joni K. Roberts Law and Mediation Office helps parents in Memphis and Shelby County propose, negotiate, and modify these plans, and offers parenting plan mediation as an alternative to a contested hearing.",
+                                    "show_actions": "true",
+                                    "variant": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "9f441473d69b",
+            "_label": "Body",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "5bb108c6cd19",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "ec47726de5c7",
+                            "base_font_size": "",
+                            "width": "66.66%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "d10b05d2948e",
+                                    "content": "<h2>What is a permanent parenting plan in Tennessee?</h2><p>A permanent parenting plan is the court order that sets each parent's residential schedule with the child and allocates decision-making authority between the parents. [NEEDS ATTORNEY INPUT &mdash; expand: what the plan must contain, and how it is entered.]</p><h2>What is the difference between custody and parenting time?</h2><p>[NEEDS ATTORNEY INPUT &mdash; this question is the reason the page carries both terms, so the answer matters. Explain the terminology shift plainly.]</p><h2>How is custody decided in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; best-interest factors. Legal substance.]</p><h2>Can a parent move out of state with a child?</h2><p>[NEEDS ATTORNEY INPUT &mdash; parental relocation. Legal substance.]</p><h2>At what age can a child choose which parent to live with in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; high-volume query with a widespread misconception behind it. Worth answering precisely.]</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        },
+                        {
+                            "_type": "column",
+                            "_id": "59b74d8d748f",
+                            "base_font_size": "",
+                            "width": "33.33%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-contact-card",
+                                    "_id": "e89bbe91628c",
+                                    "heading": "Discuss your parenting plan",
+                                    "show_address": "false",
+                                    "show_hours": "true",
+                                    "layout": "stacked"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "39f8bfc168e5",
+            "_label": "FAQ",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "20d258ff339b",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "49ef2f46fe53",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-faq",
+                                    "_id": "d5c24f7fd0c9",
+                                    "heading": "Parenting time questions",
+                                    "group": "parenting-time",
+                                    "heading_level": "h2",
+                                    "emit_schema": "true"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "c217cd81182f",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "42446b860c46",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "cfe52830fd2c",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "1494791f01f5",
+                                    "heading": "Questions about a parenting plan?",
+                                    "body": "",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

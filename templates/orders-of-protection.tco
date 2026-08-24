@@ -1,0 +1,136 @@
+{
+    "name": "Memphis Orders of Protection Attorney | Domestic Violence Petitions in Shelby County",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "9f74db604737",
+            "_label": "Safety",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-md)",
+            "padding_bottom": "var(--rl-space-md)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "c978543d29d5",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "c9dcc2ca75bb",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-safety-exit",
+                                    "_id": "88825c6f48c0",
+                                    "position": "inline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "c891bdc7280c",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-lg)",
+            "padding_bottom": "var(--rl-space-lg)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "5d367e380f8a",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "4a5ebc477141",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "c1e8a78e3bfc",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "e8c87e1bc322",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Joni K. Roberts Law and Mediation Office represents petitioners seeking orders of protection in Shelby County, Tennessee, and people responding to a petition filed against them. Attorney Joni K. Roberts has practiced in Tennessee since 2004.",
+                                    "show_actions": "true",
+                                    "variant": "plain"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "7a0c68449172",
+            "_label": "Body",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-lg)",
+            "padding_bottom": "var(--rl-space-lg)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "90c3e4b5fc5a",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "7ffa127d1baa",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "836790b1c96b",
+                                    "content": "<h2>How do I get an order of protection in Shelby County?</h2><p>[NEEDS ATTORNEY INPUT &mdash; the practical filing steps in Shelby County. Write this as plainly as possible: name the courthouse, say what to bring, and say what happens on the same day. Someone reading this may be deciding whether to leave the house.]</p><h2>How long does an order of protection last in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; ex parte duration and the hearing that follows. Legal substance.]</p><h2>What if a petition has been filed against me?</h2><p>[NEEDS ATTORNEY INPUT &mdash; the firm also defends against petitions, per the approved copy. Say so plainly; respondents search for this and find almost nothing written for them.]</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "5447abefcf52",
+            "_label": "Contact",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-lg)",
+            "padding_bottom": "var(--rl-space-lg)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "0f1b7be3be60",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "daa002556534",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-contact-card",
+                                    "_id": "7e91825ae5cf",
+                                    "heading": "Speak with the office",
+                                    "show_address": "false",
+                                    "show_hours": "true",
+                                    "layout": "inline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

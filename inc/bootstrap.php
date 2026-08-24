@@ -23,6 +23,7 @@ require_once ROBERTSLAW_DIR . 'inc/class-page-template.php';
 require_once ROBERTSLAW_DIR . 'inc/admin/class-settings.php';
 require_once ROBERTSLAW_DIR . 'inc/admin/class-build-status.php';
 require_once ROBERTSLAW_DIR . 'inc/admin/class-content-guard.php';
+require_once ROBERTSLAW_DIR . 'inc/admin/class-page-importer.php';
 
 require_once ROBERTSLAW_DIR . 'inc/integrations/cornerstone-elements.php';
 require_once ROBERTSLAW_DIR . 'inc/integrations/cornerstone-dynamic-content.php';
@@ -49,6 +50,7 @@ add_action(
 			\RobertsLaw\Admin\Settings::init();
 			\RobertsLaw\Admin\Build_Status::init();
 			\RobertsLaw\Admin\Content_Guard::init();
+			\RobertsLaw\Admin\Page_Importer::init();
 		}
 
 		load_child_theme_textdomain( 'robertslaw', ROBERTSLAW_DIR . 'languages' );

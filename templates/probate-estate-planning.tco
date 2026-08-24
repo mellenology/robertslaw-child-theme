@@ -1,0 +1,171 @@
+{
+    "name": "Memphis Probate and Estate Planning Attorney | Wills, Trusts, Estates",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "f244fc8833e8",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "665cf1fe8c4a",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "a714a285490b",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "663ad5db93e4",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "64b85cbc34c9",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Joni K. Roberts Law and Mediation Office handles wills, trusts, estates, conservatorships, and guardianships in Memphis and Shelby County, Tennessee. Attorney Joni K. Roberts has been appointed Guardian ad Litem in Tennessee probate court and has represented clients in Probate Court since being admitted to the Tennessee bar in 2004.",
+                                    "show_actions": "true",
+                                    "variant": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "7a98d7bed4ab",
+            "_label": "Probate services",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "2940bc7bc7af",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "619be2adffac",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-service-grid",
+                                    "_id": "58e7331fc91f",
+                                    "heading": "Probate and estate planning matters",
+                                    "silo": "probate",
+                                    "limit": "6",
+                                    "columns": "3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "992a4b161fd1",
+            "_label": "Overview",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-lg)",
+            "padding_bottom": "var(--rl-space-lg)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "cc3ba2bf25ba",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "32bbdb4ee066",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "c7455028f3fc",
+                                    "content": "<h2>How long does probate take in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; legal substance.]</p><h2>What happens if someone dies without a will in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; intestate succession. Heavily searched and thinly answered by authoritative Tennessee sources, so this one is worth real depth.]</p><h2>Do I need a will in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; legal substance.]</p><h2>How much does probate cost in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; fee statement, CLAUDE.md stop-and-ask item.]</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "38bb5dd81a6b",
+            "_label": "FAQ",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "81cbeb365acd",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "4ec8353a157b",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-faq",
+                                    "_id": "6c1c44684fd0",
+                                    "heading": "Probate questions",
+                                    "group": "probate",
+                                    "heading_level": "h2",
+                                    "emit_schema": "true"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "76675735278f",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "fccd21f4b59d",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "c5b1f7f52f49",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "4f6ffe02f129",
+                                    "heading": "Planning an estate, or settling one?",
+                                    "body": "Call or email the office to discuss wills, trusts, probate administration, conservatorships, or guardianships.",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

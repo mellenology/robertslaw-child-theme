@@ -1,0 +1,171 @@
+{
+    "name": "Memphis Family Law Attorney | Divorce, Parenting Time, Child Support",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "5d6aa454607f",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "ced3121e3522",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "47deadd77ddc",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "1e6d848dfacc",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "7084778872dc",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Joni K. Roberts Law and Mediation Office handles family law matters in Memphis and Shelby County, Tennessee, including divorce, parenting time and parenting plans, child support, post-divorce modification, adoption, paternity, and orders of protection. Attorney Joni K. Roberts has practiced in Tennessee since 2004 and offers mediation as an alternative to litigation in family matters.",
+                                    "show_actions": "true",
+                                    "variant": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "fbd2454f307f",
+            "_label": "Family law services",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "c79cdc83d082",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "00aea635bfa7",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-service-grid",
+                                    "_id": "34fee4fb6c07",
+                                    "heading": "Family law matters the firm handles",
+                                    "silo": "family-law",
+                                    "limit": "8",
+                                    "columns": "3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "117298bbf1fe",
+            "_label": "Overview",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-lg)",
+            "padding_bottom": "var(--rl-space-lg)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "5b354ebc298f",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "2caf38d5a483",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "599ec6e82e3b",
+                                    "content": "<h2>What does a family law attorney do?</h2><p>A family law attorney represents people in matters involving marriage, children, and the financial consequences of separation &mdash; divorce, parenting plans, child support, adoption, paternity, and protection orders. Joni K. Roberts handles these matters in Memphis and Shelby County both as an advocate in court and as a neutral mediator.</p><h2>How much does a family lawyer cost in Memphis?</h2><p>[NEEDS ATTORNEY INPUT &mdash; fee structure, and whether consultations are free or paid. Fee statements are on the CLAUDE.md stop-and-ask list. Cost is the single most common unanswered question in legal search, so this is worth answering even in general terms.]</p><h2>Do I need a lawyer for an uncontested divorce in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; this is legal advice and must be written or approved by Joni. Reference points already on the site: Tennessee&rsquo;s 60-day waiting period without minor children and 90 days with them.]</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "cd5a80252e4b",
+            "_label": "FAQ",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "8799926fc018",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "8f3b211f5720",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-faq",
+                                    "_id": "78fceea18415",
+                                    "heading": "Family law questions",
+                                    "group": "divorce",
+                                    "heading_level": "h2",
+                                    "emit_schema": "true"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "83f40a893b9d",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "3368c391f583",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "d63ec093424c",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "ef1526cc1da4",
+                                    "heading": "Talk through your family law matter",
+                                    "body": "Call or email the office to arrange a consultation.",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

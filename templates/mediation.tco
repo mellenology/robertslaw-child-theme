@@ -1,0 +1,139 @@
+{
+    "name": "Mediation Services in Memphis, TN | Divorce and Family Mediation",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "b911b9e5f5f6",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "0de67cc82468",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "b947d464e706",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "085a062633c2",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "e62d90b5520a",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Joni K. Roberts Law and Mediation Office offers mediation in Memphis and Shelby County, Tennessee as an alternative to litigation, including divorce mediation, parenting plan mediation, property division mediation, and general family dispute resolution. Mediation is a voluntary, informal process in which a neutral third party helps the parties negotiate their own settlement rather than having a judge decide the outcome.",
+                                    "show_actions": "true",
+                                    "variant": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "0b369b31dc9e",
+            "_label": "Mediation services",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "b299891a11fc",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "6741f8006cba",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-service-grid",
+                                    "_id": "b12092712d81",
+                                    "heading": "Types of mediation the firm offers",
+                                    "silo": "mediation",
+                                    "limit": "6",
+                                    "columns": "3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "6270bfefa03b",
+            "_label": "How mediation works",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-lg)",
+            "padding_bottom": "var(--rl-space-lg)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "199afa2b2625",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "9416324cd021",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "f573ea4459c2",
+                                    "content": "<p>[BLOCKED &mdash; awaiting the Rule 31 framing decision. The recommended approach in content/website-copy.md is to frame this as general client education, with an explicit line such as &ldquo;Tennessee courts often order parties to attend Rule 31 mediation. Here is what that process involves.&rdquo; That keeps the search value and removes the implication that the firm holds a Rule 31 listing. Do not fill this in by paraphrasing the removed copy.]</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "bbca5b2fa876",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "911278c47670",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "15291a2c0a48",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "e5e922bbd977",
+                                    "heading": "Considering mediation?",
+                                    "body": "Call or email the office to ask whether mediation may suit your situation.",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

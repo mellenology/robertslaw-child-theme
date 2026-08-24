@@ -145,14 +145,177 @@ function rl_build_tree( $key, array $blueprint, array $components, array $pages 
 /**
  * Encode a normalised tree as a Themeco .tco file.
  *
- * NOT IMPLEMENTED. See the header of this file — this needs one sample export
- * to write correctly, and guessing produces files that fail silently on import.
+ * CONFIDENCE, stated plainly so nobody is misled by a file that looks official:
+ *
+ *   HIGH   — the element hierarchy. Cornerstone nests Section > Row > Column >
+ *            Element, elements carry a `_type` and a `_id`, children live in
+ *            `_elements`, and params sit flat on the element object. The
+ *            blueprints were shaped to match this from the start.
+ *   HIGH   — the `_type` values for custom elements. Registration through
+ *            cornerstone_register_element( $class, $name, $dir ) makes the
+ *            registered name the type, so these are "rl-hero", "rl-faq", etc.
+ *   MEDIUM — the outer envelope keys and the version stamp. This is
+ *            reconstructed, not verified, because theme.co is blocked by this
+ *            environment's egress policy.
+ *
+ * If an import fails, the envelope is the thing to fix, and one sample export
+ * fixes it. Everything above this function stays as-is.
  *
  * @param array $tree Normalised tree.
- * @return string|null Encoded .tco contents, or null while unimplemented.
+ * @return string Encoded .tco contents.
  */
 function rl_encode_tco( array $tree ) {
-	return null;
+	$elements = array();
+
+	foreach ( $tree['sections'] as $index => $section ) {
+		$elements[] = rl_encode_section( $tree['page'], $index, $section );
+	}
+
+	$document = array(
+		// Envelope. The reconstructed part.
+		'name'     => $tree['title'] ? $tree['title'] : $tree['page'],
+		'type'     => 'content',
+		'version'  => RL_TCO_VERSION,
+		'elements' => $elements,
+	);
+
+	return (string) json_encode( $document, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+}
+
+/**
+ * Cornerstone version stamp written into the envelope.
+ *
+ * Change this to match the install if an import complains about a version
+ * mismatch. Reported by Cornerstone under WordPress > Plugins.
+ */
+define( 'RL_TCO_VERSION', '7.0.0' );
+
+/**
+ * Stable element id.
+ *
+ * Deterministic rather than random so re-running the build produces byte
+ * identical files and a diff shows only real changes.
+ *
+ * @param string $path Unique path to this node within the page.
+ * @return string
+ */
+function rl_element_id( $path ) {
+	return substr( md5( $path ), 0, 12 );
+}
+
+/**
+ * Encode one section and everything under it.
+ *
+ * @param string $page    Page key.
+ * @param int    $index   Section index.
+ * @param array  $section Section definition.
+ * @return array
+ */
+function rl_encode_section( $page, $index, array $section ) {
+	$path = "{$page}/section-{$index}";
+	$rows = array();
+
+	foreach ( $section['rows'] as $r => $row ) {
+		$columns = array();
+
+		foreach ( $row['columns'] as $c => $column ) {
+			$children = array();
+
+			foreach ( $column['elements'] as $e => $element ) {
+				$node = array(
+					'_type' => $element['_type'],
+					'_id'   => rl_element_id( "{$path}/{$r}/{$c}/{$e}" ),
+				);
+
+				// Params sit flat on the element object, not nested.
+				foreach ( $element['params'] as $key => $value ) {
+					$node[ $key ] = $value;
+				}
+
+				$children[] = $node;
+			}
+
+			$columns[] = array(
+				'_type'         => 'column',
+				'_id'           => rl_element_id( "{$path}/{$r}/{$c}" ),
+				'base_font_size' => '',
+				'width'         => rl_column_width( $column['width'] ),
+				'_elements'     => $children,
+			);
+		}
+
+		$rows[] = array(
+			'_type'     => 'row',
+			'_id'       => rl_element_id( "{$path}/{$r}" ),
+			'_elements' => $columns,
+		);
+	}
+
+	return array(
+		'_type'      => 'section',
+		'_id'        => rl_element_id( $path ),
+		'_label'     => $section['_label'],
+		// Tokens rather than literal values, so a section styled here still
+		// answers to config/tokens.php.
+		'bg_color'   => rl_background_token( $section['background'] ),
+		'padding_top'    => rl_spacing_token( $section['spacing'] ),
+		'padding_bottom' => rl_spacing_token( $section['spacing'] ),
+		'_elements'  => $rows,
+	);
+}
+
+/**
+ * Blueprint column width to a percentage string.
+ *
+ * @param string $width Fraction such as '1/3'.
+ * @return string
+ */
+function rl_column_width( $width ) {
+	$map = array(
+		'1/1' => '100%',
+		'1/2' => '50%',
+		'1/3' => '33.33%',
+		'2/3' => '66.66%',
+		'1/4' => '25%',
+		'3/4' => '75%',
+	);
+
+	return $map[ $width ] ?? '100%';
+}
+
+/**
+ * Section background to a CSS custom property reference.
+ *
+ * @param string $background Background key.
+ * @return string
+ */
+function rl_background_token( $background ) {
+	$map = array(
+		'surface'     => 'var(--rl-color-surface)',
+		'alt'         => 'var(--rl-color-surface-alt)',
+		'sunken'      => 'var(--rl-color-surface-sunken)',
+		'deep'        => 'var(--rl-color-surface-deep)',
+		'accent-soft' => 'var(--rl-color-accent-soft)',
+	);
+
+	return $map[ $background ] ?? 'var(--rl-color-surface)';
+}
+
+/**
+ * Section spacing to a CSS custom property reference.
+ *
+ * @param string $spacing Spacing key.
+ * @return string
+ */
+function rl_spacing_token( $spacing ) {
+	$map = array(
+		'sm' => 'var(--rl-space-md)',
+		'md' => 'var(--rl-space-lg)',
+		'lg' => 'var(--rl-space-2xl)',
+		'xl' => 'var(--rl-space-3xl)',
+	);
+
+	return $map[ $spacing ] ?? 'var(--rl-space-lg)';
 }
 
 // --- Run ---------------------------------------------------------------------
@@ -171,7 +334,7 @@ foreach ( $targets as $key ) {
 	$tree = rl_build_tree( $key, $blueprints[ $key ], $components, $pages );
 	$tco  = rl_encode_tco( $tree );
 
-	if ( null !== $tco ) {
+	if ( null !== $tco && '' !== $tco ) {
 		file_put_contents( "{$out}/{$key}.tco", $tco );
 		$encoded++;
 		fwrite( STDOUT, "  wrote build/{$key}.tco\n" );

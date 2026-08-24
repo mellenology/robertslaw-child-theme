@@ -1,0 +1,163 @@
+{
+    "name": "Memphis Divorce Attorney | Contested and Uncontested Divorce in Tennessee",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "33077dfd6d3e",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "f862bcf3f001",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "38530a4d604d",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "db2e1fcb4d4e",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "7379058de37c",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Joni K. Roberts Law and Mediation Office represents clients in contested and uncontested divorce in Memphis and Shelby County, Tennessee, including property division, alimony, and grounds for divorce. Tennessee requires a 60-day waiting period for divorcing couples without minor children and 90 days for couples with minor children. Divorce mediation is available as an alternative to a contested trial.",
+                                    "show_actions": "true",
+                                    "variant": "default"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "0c20bd7062ab",
+            "_label": "Body",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "8aec3ef72cbc",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "ccffafa6d452",
+                            "base_font_size": "",
+                            "width": "66.66%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-rich-text",
+                                    "_id": "80943e3df241",
+                                    "content": "<h2>How long does a divorce take in Tennessee?</h2><p>Tennessee requires a waiting period of 60 days for divorcing couples without minor children and 90 days for couples with minor children, measured from the date the complaint is filed. [NEEDS ATTORNEY INPUT &mdash; expand on what lengthens a contested case in Shelby County.]</p><h2>What are the grounds for divorce in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; irreconcilable differences and the fault grounds. Legal substance; must be written or approved by Joni.]</p><h2>Is Tennessee a 50/50 state?</h2><p>[NEEDS ATTORNEY INPUT &mdash; equitable distribution rather than community property. High-volume query with a widespread misconception behind it, so worth answering precisely.]</p><h2>Do I have to go to court for a divorce in Tennessee?</h2><p>[NEEDS ATTORNEY INPUT &mdash; and link through to divorce mediation, which is the firm&rsquo;s genuine differentiator on this question.]</p><h2>Can I get a divorce without my spouse agreeing?</h2><p>[NEEDS ATTORNEY INPUT &mdash; legal substance.]</p><h2>How much does a divorce cost in Memphis?</h2><p>[NEEDS ATTORNEY INPUT &mdash; fee statement, CLAUDE.md stop-and-ask item.]</p>",
+                                    "measure": "default"
+                                }
+                            ]
+                        },
+                        {
+                            "_type": "column",
+                            "_id": "2aaf0b4d1ff7",
+                            "base_font_size": "",
+                            "width": "33.33%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-contact-card",
+                                    "_id": "7836103d1a4a",
+                                    "heading": "Discuss your divorce",
+                                    "show_address": "false",
+                                    "show_hours": "true",
+                                    "layout": "stacked"
+                                },
+                                {
+                                    "_type": "rl-attorney-card",
+                                    "_id": "8ec982d40c9e",
+                                    "summary": "",
+                                    "photo": "",
+                                    "show_credentials": "false",
+                                    "show_courts": "false"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "81dac91cbef6",
+            "_label": "FAQ",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "4995e247d642",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "29800280893f",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-faq",
+                                    "_id": "71cb497bdf57",
+                                    "heading": "Divorce questions",
+                                    "group": "divorce",
+                                    "heading_level": "h2",
+                                    "emit_schema": "true"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "015472953a4b",
+            "_label": "Closing CTA",
+            "bg_color": "var(--rl-color-surface-deep)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "2cc1523be04d",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "7ba7a6c6e4a3",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-cta-band",
+                                    "_id": "0706f9c90820",
+                                    "heading": "Considering a divorce?",
+                                    "body": "Call or email to talk through your options, including whether mediation may suit your situation.",
+                                    "show_schedule": "true",
+                                    "variant": "deep"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

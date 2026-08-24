@@ -1,0 +1,99 @@
+{
+    "name": "Mediation FAQ | How Mediation Works in Tennessee",
+    "type": "content",
+    "version": "7.0.0",
+    "elements": [
+        {
+            "_type": "section",
+            "_id": "8d3d8be56cbc",
+            "_label": "Hero",
+            "bg_color": "var(--rl-color-surface-alt)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "3cfff20ea8c9",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "c4b621c677d6",
+                            "base_font_size": "",
+                            "width": "100%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-breadcrumbs",
+                                    "_id": "097143b67dcb",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-hero",
+                                    "_id": "429fe8ca26db",
+                                    "heading": "",
+                                    "eyebrow": "",
+                                    "answer": "Mediation in Tennessee is a confidential, voluntary process in which a neutral mediator helps the parties negotiate their own settlement rather than having a judge decide the outcome. A Tennessee court can order parties to attend mediation, but no party can be forced to settle.",
+                                    "show_actions": "false",
+                                    "variant": "plain"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "section",
+            "_id": "8af85c8a5839",
+            "_label": "Questions",
+            "bg_color": "var(--rl-color-surface)",
+            "padding_top": "var(--rl-space-2xl)",
+            "padding_bottom": "var(--rl-space-2xl)",
+            "_elements": [
+                {
+                    "_type": "row",
+                    "_id": "3dccc2a37b07",
+                    "_elements": [
+                        {
+                            "_type": "column",
+                            "_id": "7e89e7bed1d3",
+                            "base_font_size": "",
+                            "width": "66.66%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-faq",
+                                    "_id": "c2b4ab0e6133",
+                                    "heading": "",
+                                    "group": "mediation",
+                                    "heading_level": "h2",
+                                    "emit_schema": "true"
+                                },
+                                {
+                                    "_type": "rl-last-reviewed",
+                                    "_id": "8b5db39a95fc",
+                                    "date": "",
+                                    "show_author": "true"
+                                }
+                            ]
+                        },
+                        {
+                            "_type": "column",
+                            "_id": "cef745dcee6d",
+                            "base_font_size": "",
+                            "width": "33.33%",
+                            "_elements": [
+                                {
+                                    "_type": "rl-contact-card",
+                                    "_id": "07bedbf0742c",
+                                    "heading": "Ask about mediation",
+                                    "show_address": "false",
+                                    "show_hours": "true",
+                                    "layout": "stacked"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
