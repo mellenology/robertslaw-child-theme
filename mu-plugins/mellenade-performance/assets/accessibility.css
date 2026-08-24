@@ -1,0 +1,81 @@
+/*
+ * Contrast corrections for mellenade.com
+ * --------------------------------------
+ * Every rule below fixes a contrast failure reported by Lighthouse 13.4.1 on
+ * 2026-08-24 (mobile). Selectors are copied verbatim from the audit output, and each
+ * replacement colour was computed to clear the WCAG 2.1 AA threshold while preserving
+ * the original hue and saturation, so the brand still reads as the brand.
+ *
+ *   WCAG AA: 4.5:1 for normal text, 3.0:1 for large text (>=18pt, or >=14pt bold).
+ *
+ * | Element                        | Was      | Ratio  | Now      | Ratio  |
+ * |--------------------------------|----------|--------|----------|--------|
+ * | .mln-hdr-cta (header CTA)      | #28ab4d  | 2.99:1 | #20883d  | 4.52:1 |
+ * | h1 .x-...-subheadline          | #28ab4d  | 2.99:1 | #20883d  | 4.52:1 |
+ * | .x-anchor-text-primary         | #939fab  | 2.70:1 | #697887  | 4.53:1 |
+ * | h6 .x-text-content-text-primary| #989a9c  | 2.82:1 | #747779  | 4.51:1 |
+ *
+ * The h6 label colour failed on six separate elements, so it is the highest-frequency
+ * failure on the page even though the CTA is the most commercially important one.
+ *
+ * Scoping note: these are deliberately narrow, element-level overrides rather than a
+ * blanket variable change, because the same greys are almost certainly used elsewhere on
+ * darker backgrounds where they already pass and darkening them would make things worse.
+ */
+
+/* Brand green — fails as normal text at 2.99:1.
+   Note the h1 subheadline renders at 21pt, so it only needs 3.0:1 and misses by 0.01.
+   Both are set to the 4.5:1 value so the green is consistent site-wide and safe at any size. */
+.mln-hdr-cta,
+.x-text-content-text-subheadline,
+h1.x-text-content-text-subheadline {
+	color: #20883d;
+}
+
+/* If the header CTA is a filled button rather than text, the accessible green
+   works as a background with white text (4.52:1 inverted is identical). */
+.mln-hdr-cta.is-filled,
+.mln-hdr-cta[class*="btn"] {
+	background-color: #20883d;
+	color: #ffffff;
+}
+
+/* Muted anchor text — 2.70:1 */
+.x-anchor-text-primary {
+	color: #697887;
+}
+
+/* Card / listing labels — 2.82:1, six occurrences on the front page */
+h6.x-text-content-text-primary,
+a.x-text h6.x-text-content-text-primary {
+	color: #747779;
+}
+
+/*
+ * Layout-shift mitigation
+ * -----------------------
+ * CLS measured at 0.171 (target < 0.10). The largest single shift (0.126) moves
+ * `main.x-layout`. Reserving space for images that arrive without intrinsic dimensions
+ * stops the classic "image loads, everything below jumps" pattern.
+ *
+ * `aspect-ratio: attr()` is not broadly supported yet, so this relies on the width/height
+ * attributes WordPress already emits. The rule below is a safety net for images the theme
+ * outputs without them.
+ */
+img:not([width]):not([height]) {
+	aspect-ratio: 16 / 9;
+	width: 100%;
+	height: auto;
+}
+
+/* Icon fonts: reserve the glyph box so a late Font Awesome load does not reflow text.
+   fa-solid-900.woff2 is 276KB and arrives late, which is a likely contributor to the
+   hero shift. */
+.fa,
+.fas,
+[class^="fa-"],
+[class*=" fa-"] {
+	display: inline-block;
+	min-width: 1em;
+	text-align: center;
+}

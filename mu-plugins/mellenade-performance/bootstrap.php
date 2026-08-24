@@ -82,6 +82,7 @@ function mellenade_perf_has_woocommerce() {
 $mellenade_perf_modules = array(
 	'cleanup'     => '/includes/class-cleanup.php',
 	'assets'      => '/includes/class-assets.php',
+	'fonts'       => '/includes/class-fonts.php',
 	'woocommerce' => '/includes/class-woocommerce.php',
 	'seo'         => '/includes/class-seo.php',
 );

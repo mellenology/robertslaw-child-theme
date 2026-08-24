@@ -22,6 +22,7 @@ final class Mellenade_Perf_SEO {
 	 * Hook everything.
 	 */
 	public static function init() {
+		add_action( 'wp_head', array( __CLASS__, 'output_meta_description' ), 1 );
 		add_action( 'wp_head', array( __CLASS__, 'output_organization_schema' ), 20 );
 		add_filter( 'wp_robots', array( __CLASS__, 'robots' ) );
 		add_filter( 'the_generator', '__return_empty_string' );
@@ -42,6 +43,66 @@ final class Mellenade_Perf_SEO {
 			|| defined( 'AIOSEO_VERSION' )        // All in One SEO.
 			|| defined( 'SEOPRESS_VERSION' )      // SEOPress.
 			|| function_exists( 'tsf' )           // The SEO Framework.
+		);
+	}
+
+	/**
+	 * Emit a meta description when nothing else does.
+	 *
+	 * MEASURED: the Lighthouse SEO audit flagged `meta-description` as failing on the home
+	 * page (SEO score 92). Without one, Google composes the search snippet from whatever
+	 * page text it finds first, which for this site is navigation chrome rather than the
+	 * value proposition.
+	 *
+	 * Sources are tried in order of quality: an explicit excerpt, the product short
+	 * description on a product page, then the tagline as a last resort. Nothing is emitted
+	 * if an SEO plugin owns descriptions, or if no usable text exists — an empty or
+	 * duplicated description is worse than none.
+	 */
+	public static function output_meta_description() {
+		if ( self::has_seo_plugin() || ! mellenade_perf_is_frontend() ) {
+			return;
+		}
+
+		$description = '';
+
+		if ( is_front_page() ) {
+			$description = get_bloginfo( 'description' );
+		} elseif ( is_singular() ) {
+			$post = get_post();
+
+			if ( $post instanceof WP_Post ) {
+				if ( ! empty( $post->post_excerpt ) ) {
+					$description = $post->post_excerpt;
+				} else {
+					$description = wp_strip_all_tags( strip_shortcodes( $post->post_content ) );
+				}
+			}
+		} elseif ( is_category() || is_tag() || is_tax() ) {
+			$description = wp_strip_all_tags( term_description() );
+		}
+
+		$description = trim( preg_replace( '/\s+/', ' ', (string) $description ) );
+
+		if ( '' === $description ) {
+			return;
+		}
+
+		// ~155 chars is where Google truncates the snippet; cut on a word boundary.
+		if ( function_exists( 'mb_strlen' ) && mb_strlen( $description ) > 155 ) {
+			$description = mb_substr( $description, 0, 155 );
+			$space       = mb_strrpos( $description, ' ' );
+
+			if ( $space ) {
+				$description = mb_substr( $description, 0, $space );
+			}
+
+			$description .= '…';
+		}
+
+		printf(
+			'<meta name="description" content="%s" />' . "\n",
+			esc_attr( $description )
 		);
 	}
 

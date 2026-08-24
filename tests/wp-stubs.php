@@ -45,6 +45,20 @@ function get_theme_mod( $k ) { return st( 'logo_id', 0 ); }
 function wp_get_attachment_image_src( $id, $s ) { return st( 'logo_src', false ); }
 function wp_json_encode( $d, $f = 0 ) { return json_encode( $d, $f ); }
 function esc_url( $u ) { return $u; }
+function esc_attr( $v ) { return htmlspecialchars( $v, ENT_QUOTES ); }
+function wp_strip_all_tags( $v ) { return strip_tags( (string) $v ); }
+function strip_shortcodes( $v ) { return preg_replace( '/\[[^\]]*\]/', '', (string) $v ); }
+function term_description() { return st( 'term_desc', '' ); }
+function is_category() { return false; }
+function is_tag() { return false; }
+function is_tax() { return false; }
+function add_query_arg( $k, $v, $url ) {
+	$sep = ( false === strpos( $url, '?' ) ) ? '?' : '&';
+	return $url . $sep . $k . '=' . $v;
+}
+function plugins_url( $rel, $base ) { return 'https://mellenade.com/wp-content/mu-plugins' . $rel; }
+$GLOBALS['__enqueued'] = array();
+function wp_enqueue_style( $h, $src = '', $d = array(), $v = null ) { $GLOBALS['__enqueued'][] = $h; }
 
 $GLOBALS['__dequeued'] = array();
 function wp_dequeue_style( $h ) { $GLOBALS['__dequeued'][] = "style:$h"; }

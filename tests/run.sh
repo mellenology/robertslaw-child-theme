@@ -16,4 +16,12 @@ echo "== WooCommerce suite =="
 php tests/test-woocommerce.php
 
 echo
+echo "== Fonts + SEO suite =="
+php tests/test-fonts-seo.php
+
+echo
+echo "== Contrast verification =="
+python3 tests/verify-contrast.py
+
+echo
 echo "All checks passed."

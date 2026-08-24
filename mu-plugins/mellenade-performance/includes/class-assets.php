@@ -31,6 +31,7 @@ final class Mellenade_Perf_Assets {
 		add_filter( 'wp_resource_hints', array( __CLASS__, 'resource_hints' ), 10, 2 );
 		add_filter( 'wp_lazy_loading_enabled', array( __CLASS__, 'lazy_loading_enabled' ), 10, 3 );
 		add_filter( 'style_loader_tag', array( __CLASS__, 'clean_asset_tag' ), 10, 2 );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_accessibility_css' ), 999 );
 	}
 
 	/**
@@ -177,6 +178,32 @@ final class Mellenade_Perf_Assets {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Load the contrast/CLS corrections.
+	 *
+	 * Priority 999 so it lands after the theme's own stylesheets and wins on specificity
+	 * ties without needing !important.
+	 */
+	public static function enqueue_accessibility_css() {
+		if ( ! mellenade_perf_is_frontend() ) {
+			return;
+		}
+
+		$rel  = '/mellenade-performance/assets/accessibility.css';
+		$path = MELLENADE_PERF_DIR . '/assets/accessibility.css';
+
+		if ( ! is_readable( $path ) ) {
+			return;
+		}
+
+		wp_enqueue_style(
+			'mellenade-accessibility',
+			plugins_url( $rel, dirname( MELLENADE_PERF_DIR ) . '/mellenade-performance.php' ),
+			array(),
+			MELLENADE_PERF_VERSION
+		);
 	}
 
 	/**
