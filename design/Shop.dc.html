@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Poppins:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; font-family: "Poppins", "Trebuchet MS", sans-serif; background: #FFFDF7; }
+    a { color: #20863c; text-decoration: none; } a:hover { color: #15612b; }
+    h1,h2,h3 { margin: 0; font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif; }
+    p { margin: 0; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #FFFDF7;">
+  <div style="background: #0F1A24; padding: 0 28px; height: 76px; display: flex; align-items: center; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg width="30" height="34" viewBox="0 0 30 34" fill="none"><path d="M6 9h18l-2.2 21a2 2 0 0 1-2 1.8h-9.6a2 2 0 0 1-2-1.8L6 9Z" fill="#FFD23F"/><path d="M4.5 6.6h21a1.4 1.4 0 0 1 0 2.8h-21a1.4 1.4 0 0 1 0-2.8Z" fill="#fff"/><circle cx="12" cy="17" r="2" fill="#2FBF57"/></svg>
+      <span style="font: 800 19px/1 'Bricolage Grotesque', sans-serif; color: #fff;">MELLENADE</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; align-items: center; gap: 10px; background: #1B2833; border: 1px solid #2C3B48; border-radius: 999px; height: 46px; padding: 0 18px; max-width: 520px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FA0AE" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+      <span style="font: 400 14px/1 'Poppins', sans-serif; color: #8FA0AE;">Search by player, set, or year…</span>
+    </div>
+    <a href="#" style="display: flex; align-items: center; height: 44px; padding: 0 20px; border-radius: 999px; background: #2FBF57; color: #0F1A24; font: 700 13px/1 'Poppins', sans-serif;">Sell Your Collection</a>
+    <div style="position: relative; width: 44px; height: 44px; border-radius: 999px; background: #1B2833; display: flex; align-items: center; justify-content: center;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.6 9H7.6L6 6Z"></path><circle cx="9" cy="20" r="1.6"></circle><circle cx="18" cy="20" r="1.6"></circle></svg>
+      <span style="position: absolute; top: -2px; right: -2px; min-width: 19px; height: 19px; border-radius: 999px; background: #FFD23F; color: #0F1A24; font: 700 11px/19px 'Poppins', sans-serif; text-align: center; border: 2px solid #0F1A24;">3</span>
+    </div>
+  </div>
+
+  <div style="padding: 30px 28px 12px;">
+    <div style="max-width: 1264px; margin: 0 auto; display: flex; align-items: center; gap: 8px;">
+      <span style="font: 400 13px/1 'Poppins', sans-serif; color: #7a7569;">Home</span>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7a7569" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"></path></svg>
+      <span style="font: 500 13px/1 'Poppins', sans-serif; color: #0F1A24;">Shop</span>
+    </div>
+  </div>
+
+  <div style="padding: 0 28px 70px;">
+    <div style="max-width: 1264px; margin: 0 auto;">
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px;">
+        <h1 style="font-size: 44px; font-weight: 800; color: #0F1A24; letter-spacing: -.025em;">The Mellenade Stand</h1>
+        <p style="font: 400 16px/1.6 'Poppins', sans-serif; color: #4A5560;">Breaks, repacks, slabs and sealed wax — restocked every week.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 34px; align-items: start;">
+
+        <!-- FILTERS -->
+        <div style="display: flex; flex-direction: column; gap: 26px; background: #fff; border: 1px solid #E8E4DA; border-radius: 16px; padding: 24px;">
+          <sc-for list="{{filters}}" as="f" hint-placeholder-count="3">
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <span style="font: 700 12px/1 'Poppins', sans-serif; color: #0F1A24; letter-spacing: .1em;">{{f.group}}</span>
+              <sc-for list="{{f.opts}}" as="o" hint-placeholder-count="4">
+                <div style="display: flex; align-items: center; gap: 10px; min-height: 30px;">
+                  <span style="width: 17px; height: 17px; border-radius: 5px; border: 1.5px solid {{o.border}}; background: {{o.fill}}; flex-shrink: 0;"></span>
+                  <span style="font: 400 14px/1 'Poppins', sans-serif; color: #4A5560; flex-grow: 1;">{{o.label}}</span>
+                  <span style="font: 400 12px/1 'Poppins', sans-serif; color: #7a7569;">{{o.n}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-for>
+          <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #E8E4DA;">
+            <span style="font: 700 12px/1 'Poppins', sans-serif; color: #0F1A24; letter-spacing: .1em;">PRICE</span>
+            <div style="height: 4px; border-radius: 999px; background: #E8E4DA; position: relative; margin: 10px 0;">
+              <span style="position: absolute; left: 10%; right: 32%; top: 0; bottom: 0; background: #2FBF57; border-radius: 999px;"></span>
+              <span style="position: absolute; left: 10%; top: -7px; width: 18px; height: 18px; border-radius: 999px; background: #fff; border: 2px solid #20863c;"></span>
+              <span style="position: absolute; right: 32%; top: -7px; width: 18px; height: 18px; border-radius: 999px; background: #fff; border: 2px solid #20863c;"></span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font: 500 13px/1 'Poppins', sans-serif; color: #4A5560;">[MIN]</span>
+              <span style="font: 500 13px/1 'Poppins', sans-serif; color: #4A5560;">[MAX]</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRID -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font: 400 14px/1 'Poppins', sans-serif; color: #4A5560;">Showing [N] products</span>
+            <div style="display: flex; align-items: center; gap: 10px; border: 1px solid #E8E4DA; background: #fff; border-radius: 999px; height: 44px; padding: 0 18px;">
+              <span style="font: 500 14px/1 'Poppins', sans-serif; color: #0F1A24;">Sort: Newest</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F1A24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"></path></svg>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+            <sc-for list="{{products}}" as="p" hint-placeholder-count="6">
+              <div style="background: #fff; border: 1px solid #E8E4DA; border-radius: 16px; overflow: hidden;">
+                <div style="height: 200px; background: #F2EFE6; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid #E8E4DA;">
+                  <span style="font: 500 12px/1 'Poppins', sans-serif; color: #716c61;">[ PRODUCT PHOTO ]</span>
+                  <sc-if value="{{p.badge}}" hint-placeholder-val="{{true}}">
+                    <span style="position: absolute; top: 12px; left: 12px; font: 700 10px/1 'Poppins', sans-serif; color: #0F1A24; background: {{p.badgeBg}}; padding: 6px 10px; border-radius: 999px; letter-spacing: .06em;">{{p.badge}}</span>
+                  </sc-if>
+                </div>
+                <div style="padding: 18px; display: flex; flex-direction: column; gap: 10px;">
+                  <span style="font: 600 11px/1 'Poppins', sans-serif; color: #20863c; letter-spacing: .1em;">{{p.cat}}</span>
+                  <h3 style="font-size: 17px; font-weight: 800; color: #0F1A24; line-height: 1.3; letter-spacing: -.01em; min-height: 44px;">{{p.title}}</h3>
+                  <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid #E8E4DA;">
+                    <span style="font: 800 20px/1 'Bricolage Grotesque', sans-serif; color: #0F1A24;">{{p.price}}</span>
+                    <a href="#" style="display: flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 999px; background: #0F1A24; color: #fff; font: 700 13px/1 'Poppins', sans-serif;">Add to cart</a>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const on  = { border: '#20863c', fill: '#2FBF57' };
+    const off = { border: '#D6D0C2', fill: '#fff' };
+    return {
+      filters: [
+        { group: 'CATEGORY', opts: [
+          { label: 'Live Breaks', n: '[N]', ...on },
+          { label: 'Repacks', n: '[N]', ...off },
+          { label: 'Graded Slabs', n: '[N]', ...off },
+          { label: 'Sealed Wax', n: '[N]', ...off } ] },
+        { group: 'SPORT', opts: [
+          { label: 'Basketball', n: '[N]', ...off },
+          { label: 'Football', n: '[N]', ...off },
+          { label: 'Baseball', n: '[N]', ...off },
+          { label: 'Pokémon', n: '[N]', ...on } ] },
+        { group: 'BRAND', opts: [
+          { label: 'Topps', n: '[N]', ...off },
+          { label: 'Panini', n: '[N]', ...off },
+          { label: 'Upper Deck', n: '[N]', ...off } ] }
+      ],
+      products: [
+        { cat: 'LIVE BREAK', title: '2024 Prizm Basketball — Hobby Box PYT', price: '[PRICE]', badge: '7 SLOTS LEFT', badgeBg: '#FFD23F' },
+        { cat: 'LIVE BREAK', title: '2024 Topps Chrome Baseball — Random Team', price: '[PRICE]', badge: 'FILLING NOW', badgeBg: '#FFD23F' },
+        { cat: 'POKÉMON',    title: 'Surging Sparks — Sealed Booster Box', price: '[PRICE]', badge: '', badgeBg: '#FFD23F' },
+        { cat: 'REPACK',     title: 'Mellenade Mystery Repack — 20 Card', price: '[PRICE]', badge: 'RESTOCKED', badgeBg: '#2FBF57' },
+        { cat: 'GRADED SLAB',title: 'PSA 10 Rookie — [PLAYER NAME]', price: '[PRICE]', badge: '', badgeBg: '#FFD23F' },
+        { cat: 'SEALED WAX', title: '2023 Donruss Football — Blaster Box', price: '[PRICE]', badge: '', badgeBg: '#FFD23F' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

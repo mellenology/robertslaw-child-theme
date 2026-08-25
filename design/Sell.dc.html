@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Poppins:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; font-family: "Poppins", "Trebuchet MS", sans-serif; background: #FFFDF7; }
+    a { color: #20863c; text-decoration: none; } a:hover { color: #15612b; }
+    h1,h2,h3 { margin: 0; font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif; }
+    p { margin: 0; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #FFFDF7;">
+  <div style="background: #0F1A24; padding: 0 28px; height: 76px; display: flex; align-items: center; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg width="30" height="34" viewBox="0 0 30 34" fill="none"><path d="M6 9h18l-2.2 21a2 2 0 0 1-2 1.8h-9.6a2 2 0 0 1-2-1.8L6 9Z" fill="#FFD23F"/><path d="M4.5 6.6h21a1.4 1.4 0 0 1 0 2.8h-21a1.4 1.4 0 0 1 0-2.8Z" fill="#fff"/><circle cx="12" cy="17" r="2" fill="#2FBF57"/></svg>
+      <span style="font: 800 19px/1 'Bricolage Grotesque', sans-serif; color: #fff;">MELLENADE</span>
+    </div>
+    <div style="flex-grow: 1;"></div>
+    <span style="font: 500 14px/1 'Poppins', sans-serif; color: #fff;">Breaks</span>
+    <span style="font: 500 14px/1 'Poppins', sans-serif; color: #fff;">Shop</span>
+    <div style="position: relative; width: 44px; height: 44px; border-radius: 999px; background: #1B2833; display: flex; align-items: center; justify-content: center;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.6 9H7.6L6 6Z"></path><circle cx="9" cy="20" r="1.6"></circle><circle cx="18" cy="20" r="1.6"></circle></svg>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="background: #2FBF57; padding: 76px 28px;">
+    <div style="max-width: 1264px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
+        <span style="font: 600 12px/1 'Poppins', sans-serif; color: #10441F; letter-spacing: .14em;">SELL YOUR COLLECTION</span>
+        <h1 style="font-size: 58px; font-weight: 800; color: #0F1A24; line-height: 1.04; letter-spacing: -.03em; text-wrap: pretty;">Turn your cards into cash — fast and fair.</h1>
+        <p style="font: 400 18px/1.6 'Poppins', sans-serif; color: #10441F; max-width: 500px; text-wrap: pretty;">Whether you've got a shoebox of old cards, a binder of Pokémon, or a whole storage unit full of slabs — we buy collections big and small. Based in Memphis, we make the process easy, transparent and quick.</p>
+        <a href="#" style="display: flex; align-items: center; height: 58px; padding: 0 34px; border-radius: 999px; background: #0F1A24; color: #fff; font: 700 16px/1 'Poppins', sans-serif;">Start the process</a>
+      </div>
+
+      <!-- FORM -->
+      <div style="background: #fff; border-radius: 18px; padding: 30px; box-shadow: 0 20px 44px rgba(15,26,36,.16);">
+        <h3 style="font-size: 21px; font-weight: 800; color: #0F1A24; margin-bottom: 6px;">Tell us what you have</h3>
+        <p style="font: 400 14px/1.5 'Poppins', sans-serif; color: #4A5560; margin-bottom: 22px;">Takes about two minutes. No obligation.</p>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <sc-for list="{{fields}}" as="f" hint-placeholder-count="4">
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <span style="font: 600 12px/1 'Poppins', sans-serif; color: #0F1A24;">{{f.label}}</span>
+              <div style="height: 50px; border: 1px solid #E8E4DA; border-radius: 10px; background: #FDFCF8; display: flex; align-items: center; padding: 0 16px;">
+                <span style="font: 400 14px/1 'Poppins', sans-serif; color: #7b7466;">{{f.ph}}</span>
+              </div>
+            </div>
+          </sc-for>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <span style="font: 600 12px/1 'Poppins', sans-serif; color: #0F1A24;">Photos of the collection</span>
+            <div style="height: 96px; border: 1.5px dashed #C9C3B5; border-radius: 10px; background: #FDFCF8; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px;">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#7a7569" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M12 4 7 9M12 4l5 5"></path><path d="M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2"></path></svg>
+              <span style="font: 400 13px/1 'Poppins', sans-serif; color: #7a7569;">Drop photos here, or browse</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center; height: 54px; border-radius: 999px; background: #2FBF57; margin-top: 6px;">
+            <span style="font: 700 15px/1 'Poppins', sans-serif; color: #0F1A24;">Get my offer</span>
+          </div>
+          <p style="font: 400 12px/1.5 'Poppins', sans-serif; color: #7a7569; text-align: center;">We reply within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE BUY -->
+  <div style="padding: 72px 28px;">
+    <div style="max-width: 1264px; margin: 0 auto;">
+      <h2 style="font-size: 38px; font-weight: 800; color: #0F1A24; letter-spacing: -.025em; margin-bottom: 28px;">What we buy</h2>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
+        <sc-for list="{{buys}}" as="b" hint-placeholder-count="4">
+          <div style="background: #fff; border: 1px solid #E8E4DA; border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 12px; min-height: 176px;">
+            <div style="width: 44px; height: 44px; border-radius: 11px; background: {{b.tint}}; display: flex; align-items: center; justify-content: center;">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0F1A24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h5"></path></svg>
+            </div>
+            <h3 style="font-size: 18px; font-weight: 800; color: #0F1A24; margin-top: auto;">{{b.t}}</h3>
+            <p style="font: 400 13px/1.55 'Poppins', sans-serif; color: #4A5560; text-wrap: pretty;">{{b.d}}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY SELL -->
+  <div style="background: #0F1A24; padding: 72px 28px;">
+    <div style="max-width: 1264px; margin: 0 auto;">
+      <h2 style="font-size: 38px; font-weight: 800; color: #fff; letter-spacing: -.025em; margin-bottom: 34px;">Why sell to Mellenade?</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;">
+        <sc-for list="{{why}}" as="w" hint-placeholder-count="3">
+          <div style="background: #16283A; border-radius: 16px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
+            <span style="font: 800 30px/1 'Bricolage Grotesque', sans-serif; color: #FFD23F;">{{w.n}}</span>
+            <h3 style="font-size: 19px; font-weight: 800; color: #fff;">{{w.t}}</h3>
+            <p style="font: 400 14px/1.6 'Poppins', sans-serif; color: #B7C4CE; text-wrap: pretty;">{{w.d}}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 40px;">
+        <a href="#" style="display: flex; align-items: center; height: 56px; padding: 0 34px; border-radius: 999px; background: #2FBF57; color: #0F1A24; font: 700 16px/1 'Poppins', sans-serif;">Start the process</a>
+        <span style="font: 400 14px/1 'Poppins', sans-serif; color: #8FA0AE;">or call [YOUR PHONE NUMBER]</span>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      fields: [
+        { label: 'Your name',  ph: 'First and last name' },
+        { label: 'Email',      ph: 'you@email.com' },
+        { label: 'What kind of collection?', ph: 'Sports cards, Pokémon, mixed…' },
+        { label: 'Roughly how big?', ph: 'A shoebox, a few binders, a storage unit…' }
+      ],
+      buys: [
+        { t: 'Sports cards',  d: 'Vintage through modern — base, inserts, autos and numbered.', tint: '#FFF3CC' },
+        { t: 'Pokémon',       d: 'Sealed product, binders and singles from any era.',           tint: '#FCE9E9' },
+        { t: 'Graded slabs',  d: 'PSA, BGS, SGC and CGC — single slabs or full collections.',   tint: '#E7F0F7' },
+        { t: 'Sealed wax',    d: 'Boxes, cases and unopened product of any age.',               tint: '#EAF7EE' }
+      ],
+      why: [
+        { n: '01', t: 'Transparent pricing', d: 'We price against real, recent comps and show you how we got to the number. No lowball, no mystery.' },
+        { n: '02', t: 'Any size collection', d: 'A shoebox from the attic or a storage unit of slabs — we look at all of it, and we say yes to small lots.' },
+        { n: '03', t: 'Paid the same day',   d: 'Accept the offer and get paid same day. Local pickup available across Memphis.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

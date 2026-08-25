@@ -14,3 +14,6 @@ vendor/
 wp-config.php
 .env
 .env.*
+
+# Generated design canvas (regenerable from design/*.dc.html via the design skill)
+design/mellenade-sports-cards-redesign.html
